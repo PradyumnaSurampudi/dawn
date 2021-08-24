@@ -92,7 +92,7 @@ async function g() {
 
 g();
         </script>
-        <p>{{cartContents.total_price}}</p>
+        
         {%- for block in section.blocks -%}
           {%- case block.type -%}
           {%- when '@app' -%}
@@ -106,6 +106,7 @@ g();
               {{ product.title | escape }}
             </h1>
           {%- when 'price' -%}
+        <p>{{cartContents.total_price}}</p>
             <div class="no-js-hidden" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
               {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
             </div>
