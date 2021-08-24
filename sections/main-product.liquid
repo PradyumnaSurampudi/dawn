@@ -90,13 +90,17 @@ async function g() {
   let shipRates = await fetch('/admin/api/2021-07/shipping_zones.json')
   .then(response => response.json())
   .then(data => { return data });
-  console.log(shipRates);
- let pbsr = shipRates.shipping_zones[0].price_based_shipping_rates;
-  console.log(pbsr)
-  pbsr.map(sr => (console.log(Number(sr.min_order_subtotal))));
-  console.log(cartContents);
+
   console.log(cartContents.total_price)
   let cartPrice = cartContents.total_price / 100;
+  console.log(cartPrice)
+   let pbsr = shipRates.shipping_zones[0].price_based_shipping_rates;
+  console.log(pbsr);
+  pbsr.map(sr => (
+    { const freeShip = Number(sr.min_order_subtotal);
+     console.log(Number(sr.min_order_subtotal)))
+    });
+  let priceToFree = freeShip-cartPrice;
   var element = document.getElementById('cartPrice');
   element.innerText = cartPrice;
 }
