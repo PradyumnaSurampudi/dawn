@@ -91,7 +91,7 @@ async function g() {
   .then(response => response.json())
   .then(data => { return data });
   console.log(shipRates);
-  console.log(shipRates.shipping_zones[0].price_based_shipping_rates)
+  console.log(shipRates.shipping_zones[0].price_based_shipping_rates.min_order_subtotal)
 
   console.log(cartContents);
   console.log(cartContents.total_price)
