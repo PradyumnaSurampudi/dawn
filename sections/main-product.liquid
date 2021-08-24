@@ -88,6 +88,8 @@ async function g() {
   // do something with a ...
   console.log(cartContents);
   console.log(cartContents.total_price)
+  var element = document.getElementById('cartPrice');
+  element.innerText = cartContents.total_price;
 }
 
 g();
@@ -106,7 +108,7 @@ g();
               {{ product.title | escape }}
             </h1>
           {%- when 'price' -%}
-        <p>{{cartContents.total_price}}</p>
+        <p id="cartPrice">{{cartContents.total_price}}</p>
             <div class="no-js-hidden" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
               {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
             </div>
