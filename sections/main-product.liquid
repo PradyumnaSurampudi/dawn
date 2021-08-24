@@ -68,25 +68,12 @@
     <div class="product__info-wrapper grid__item">
       <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
-	<script>
-//   var cartContents = fetch('/cart.js')
-//   .then(response => response.json())
-//   .then(data => { return data });
-//       console.log(cartContents)
-//       console.log(cartContents.total_price)
-      
-// function f() {
-//   return new Promise(function(resolve, reject) {
-//     resolve(4);
-//   });
-// }
-
+	
+        <script>
 async function g() {
   var cartContents = await fetch('/cart.js')
   .then(response => response.json())
-  .then(data => { return data });
-  // do something with a ...
-  
+  .then(data => { return data }); 
   let shipRates = await fetch('/admin/api/2021-07/shipping_zones.json')
   .then(response => response.json())
   .then(data => { return data });
@@ -99,13 +86,8 @@ async function g() {
   let newObj = Object.fromEntries(Object.entries(pbsr).map(([k, v]) => [k, v]));
   console.log(newObj[0].min_order_subtotal);
   let freeShip = Number(newObj[0].min_order_subtotal);
-//   pbsr.map(sr => (
-//     { 
-//      console.log(Number(sr.min_order_subtotal)))
-
-//     });
-       let priceToFree = freeShip-cartPrice;
-           console.log(priceToFree)
+  let priceToFree = freeShip-cartPrice;
+  console.log(priceToFree)
   var element = document.getElementById('cartPrice');
   if(priceToFree >= 0 )
   {
