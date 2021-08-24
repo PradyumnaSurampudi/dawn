@@ -102,6 +102,12 @@ $('#product-form-template--14915902800039__main').on('submit', function(e) {
   console.log("jquery")
 g();
 });
+          var ele = document.getElementById('product-form-template--14915902800039__main');
+if(ele.addEventListener){
+    ele.addEventListener("submit", g(), false);  //Modern browsers
+}else if(ele.attachEvent){
+    ele.attachEvent('onsubmit', g());            //Old IE
+}
         </script>
         
         {%- for block in section.blocks -%}
