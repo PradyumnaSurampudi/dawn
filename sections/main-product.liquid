@@ -96,15 +96,17 @@ async function g() {
   console.log(cartPrice)
    let pbsr = shipRates.shipping_zones[0].price_based_shipping_rates;
   console.log(pbsr);
+  let newObj = Object.fromEntries(Object.entries(pbsr).map(([k, v]) => [k, v]));
+  console.log(newObj)
   pbsr.map(sr => (
     { const freeShip = Number(sr.min_order_subtotal);
      console.log(Number(sr.min_order_subtotal)))
-     let priceToFree = freeShip-cartPrice;
-           console.log(priceToFree)
+
+    });
+  //      let priceToFree = freeShip-cartPrice;
+//            console.log(priceToFree)
   var element = document.getElementById('cartPrice');
   element.innerText = cartPrice;
-    });
-  
 }
 
 g();
