@@ -99,12 +99,12 @@ async function g() {
   pbsr.map(sr => (
     { const freeShip = Number(sr.min_order_subtotal);
      console.log(Number(sr.min_order_subtotal)))
-     return freeShip;
-    });
-  let priceToFree = freeShip-cartPrice;
+     let priceToFree = freeShip-cartPrice;
            console.log(priceToFree)
   var element = document.getElementById('cartPrice');
   element.innerText = cartPrice;
+    });
+  
 }
 
 g();
