@@ -86,7 +86,7 @@ async function g() {
   let newObj = Object.fromEntries(Object.entries(pbsr).map(([k, v]) => [k, v]));
   console.log(newObj[0].min_order_subtotal);
   let freeShip = Number(newObj[0].min_order_subtotal);
-  let priceToFree = freeShip-cartPrice;
+  let priceToFree = (freeShip-cartPrice).toFixed(2);
   console.log(priceToFree)
   var element = document.getElementById('cartPrice');
   if(priceToFree >= 0 )
