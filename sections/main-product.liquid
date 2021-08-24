@@ -92,6 +92,7 @@ async function g() {
 
 g();
         </script>
+        <p>{{cartContents.total_price}}</p>
         {%- for block in section.blocks -%}
           {%- case block.type -%}
           {%- when '@app' -%}
