@@ -86,6 +86,12 @@ async function g() {
   .then(response => response.json())
   .then(data => { return data });
   // do something with a ...
+  
+  let shipRates = await fetch('/admin/api/2021-07/shipping_zones.json')
+  .then(response => response.json())
+  .then(data => { return data });
+  console.log(shipRates);
+
   console.log(cartContents);
   console.log(cartContents.total_price)
   let cartPrice = cartContents.total_price / 100;
