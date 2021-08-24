@@ -107,7 +107,12 @@ async function g() {
        let priceToFree = freeShip-cartPrice;
            console.log(priceToFree)
   var element = document.getElementById('cartPrice');
-  element.innerText = cartPrice;
+  if(priceToFree >= 0 )
+  {
+    element.innerText = "you are only €"+priceToFree+"away from free shipping!";
+  } else {
+    element.innerText = "Congratulations! you are eligible for free shipping!";
+  }
 }
 
 g();
