@@ -72,7 +72,7 @@
   var cartContents = fetch('/cart.js')
   .then(response => response.json())
   .then(data => { return data });
-      console.log(cartContents)
+      console.log(cartContents.total_price)
         </script>
         {%- for block in section.blocks -%}
           {%- case block.type -%}
