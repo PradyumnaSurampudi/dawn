@@ -88,8 +88,9 @@ async function g() {
   // do something with a ...
   console.log(cartContents);
   console.log(cartContents.total_price)
+  let cartPrice = cartContents.total_price / 100;
   var element = document.getElementById('cartPrice');
-  element.innerText = cartContents.total_price;
+  element.innerText = cartPrice;
 }
 
 g();
