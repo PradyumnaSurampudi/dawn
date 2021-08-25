@@ -5,15 +5,18 @@ async function g() {
   .then(response => response.json())
   .then(data => { return data }); 
   console.log(cartContents)
-  console.log(cartContents.total_price)
-  let cartPrice = cartContents.total_price / 100;
-  console.log(cartPrice)
+  console.log(cartContents.token)
+  let cartToken = cartContents.token;
   var element = document.getElementById('cartPrice');
+  element.value = cartToken;
 }
 
 g();
 </script>
-  <input type="hidden" name="form_type" value="contact"><input type="hidden" name="utf8" value="✓"><div class="contact__fields">
+  <input type="hidden" name="cartToken" value="">
+  <input type="hidden" name="form_type" value="contact">
+  <input type="hidden" name="utf8" value="✓">
+  <div class="contact__fields">
       <div class="field">
         <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[Name]" value="" placeholder="Name">
         <label class="field__label" for="ContactForm-name">Name</label>
