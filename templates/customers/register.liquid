@@ -48,6 +48,7 @@
         {{ 'customer.register.first_name' | t }}
       </label>
     </div>
+    <input type="hidden" id="customer_tags" name="customer[tags]" value="some-tag"/>
     <div class="field">
       <input
         type="text"
@@ -61,6 +62,15 @@
         {{ 'customer.register.last_name' | t }}
       </label>
     </div>
+      <div class="birthday">
+    <label for="birthday">Birthday</label>
+    <input id="birthday" type="date" name="customer[note][Birthday]" />
+  </div>
+
+  <div class="allergies">
+    <label for="allergies">Allergies</label>
+    <input id="allergies" type="date" name="customer[note][Allergies]" />
+  </div>
     <div class="field">      
       <input
         type="email"
