@@ -77,8 +77,10 @@ async function g() {
   let shipRates = await fetch('/admin/api/2021-07/shipping_zones.json')
   .then(response => response.json())
   .then(data => { return data });
-
-  console.log(cartContents.total_price)
+  let orderDeets = await fetch('/admin/api/2021-07/orders/1004.json')
+  .then(response => response.json())
+  .then(data => { return data });
+  console.log(orderDeets)
   let cartPrice = cartContents.total_price / 100;
   console.log(cartPrice)
    let pbsr = shipRates.shipping_zones[0].price_based_shipping_rates;
