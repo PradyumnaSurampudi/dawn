@@ -54,11 +54,11 @@
             {%- else -%}
               <div class="cart__ctas" {{ block.shopify_attributes }}>
                 <noscript>
-                  <input type="text" id="ticket-number" name="attributes[Ticket Number]" value="{{cart.attributes["Ticket Number"]}}" form="cart"/>
                   <button type="submit" class="cart__update-button button button--secondary" form="cart">
                     {{ 'sections.cart.update' | t }}
                   </button>
                 </noscript>
+                  <input type="text" id="ticket-number" name="attributes[Ticket Number]" value="{{cart.attributes["Ticket Number"]}}" form="cart"/>
 
                 <button type="submit" class="cart__checkout-button button" name="checkout"{% if cart == empty %} disabled{% endif %} form="cart">
                   {{ 'sections.cart.checkout' | t }}
