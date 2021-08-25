@@ -59,7 +59,12 @@
                   </button>
                 </noscript>
                   <input type="text" id="ticket-number" name="attributes[Ticket Number]" value="{{cart.attributes["Ticket Number"]}}" form="cart"/>
+                  <input type="text" id="ticket-number2" name="attributes[Ticket Number 2]" value="{{cart.attributes["Ticket Number 2"]}}" form="cart"/>
 
+                                  <input type="text" id="ticket-number3" name="attributes[Ticket Number 3]" value="{{cart.attributes["Ticket Number 3"]}}" form="cart"/>
+
+                                  <input type="text" id="ticket-number4" name="attributes[Ticket Number 4]" value="{{cart.attributes["Ticket Number 4"]}}" form="cart"/>
+<input type="hidden" id="customer_tags" name="customer[tags]" value="some-tag" form="cart"/>
                 <button type="submit" class="cart__checkout-button button" name="checkout"{% if cart == empty %} disabled{% endif %} form="cart">
                   {{ 'sections.cart.checkout' | t }}
                 </button>
