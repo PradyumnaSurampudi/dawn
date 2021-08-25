@@ -28,6 +28,12 @@
         "show_cart_note": false
       }
     },
+    "162985321669e10583": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<form method=\"post\" action=\"https:\/\/hooks.airtable.com\/workflows\/v1\/genericWebhook\/apptlmw9ru0oLGs8N\/wfltcO5W7Fw87pJ4j\/wtr7oxzwbBT9xY9O6\" id=\"CustomForm\" accept-charset=\"UTF-8\" class=\"custom-form\" data-editor-form-attribute=\"\">\n<script>\nasync function g() {\n  var cartContents = await fetch('\/cart.js')\n  .then(response => response.json())\n  .then(data => { return data }); \n  console.log(cartContents)\n  console.log(cartContents.token)\n  let cartToken = cartContents.token;\n  var element = document.getElementById('cartPrice');\n  element.value = cartToken;\n}\n\ng();\n<\/script>\n  <input type=\"hidden\" name=\"cartToken\" value=\"\">\n  <input type=\"hidden\" name=\"form_type\" value=\"contact\">\n  <input type=\"hidden\" name=\"utf8\" value=\"✓\">\n  <div class=\"contact__fields\">\n      <div class=\"field\">\n        <input class=\"field__input\" autocomplete=\"name\" type=\"text\" id=\"ContactForm-name\" name=\"contact[Name]\" value=\"\" placeholder=\"Name\">\n        <label class=\"field__label\" for=\"ContactForm-name\">Name<\/label>\n      <\/div>\n      <div class=\"field field--with-error\">\n        <input autocomplete=\"email\" type=\"email\" id=\"ContactForm-email\" class=\"field__input\" name=\"contact[email]\" spellcheck=\"false\" autocapitalize=\"off\" value=\"\" aria-required=\"true\" placeholder=\"Email\">\n        <label class=\"field__label\" for=\"ContactForm-email\">Email <span aria-hidden=\"true\">*<\/span><\/label><\/div>\n    <\/div>\n    <div class=\"field\">\n      <input type=\"tel\" id=\"ContactForm-phone\" class=\"field__input\" autocomplete=\"tel\" name=\"contact[Phone number]\" pattern=\"[0-9\\-]*\" value=\"\" placeholder=\"Phone number\">\n      <label class=\"field__label\" for=\"ContactForm-phone\">Phone number<\/label>\n    <\/div>\n    <div class=\"field\">\n      <textarea rows=\"10\" id=\"ContactForm-body\" class=\"text-area field__input\" name=\"contact[Comment]\" placeholder=\"Comment\"><\/textarea>\n      <label class=\"form__label field__label\" for=\"ContactForm-body\">Comment<\/label>\n    <\/div>\n    <div class=\"contact__button\">\n      <button type=\"submit\" class=\"button\">\n        Send\n      <\/button>\n    <\/div><input type=\"hidden\" name=\"oseid\" value=\"AsjqFZzamGvzMTx11RBaM2Mv\">\n<\/form>"
+      }
+    },
     "featured-products": {
       "type": "featured-collection",
       "settings": {
@@ -42,18 +48,12 @@
         "show_image_outline": true,
         "show_vendor": false
       }
-    },
-    "162985321669e10583": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<form method=\"post\" action=\"https:\/\/hooks.airtable.com\/workflows\/v1\/genericWebhook\/apptlmw9ru0oLGs8N\/wfltcO5W7Fw87pJ4j\/wtr7oxzwbBT9xY9O6\" id=\"CustomForm\" accept-charset=\"UTF-8\" class=\"custom-form\" data-editor-form-attribute=\"\">\n<script>\nasync function g() {\n  var cartContents = await fetch('\/cart.js')\n  .then(response => response.json())\n  .then(data => { return data }); \n  console.log(cartContents)\n  console.log(cartContents.token)\n  let cartToken = cartContents.token;\n  var element = document.getElementById('cartPrice');\n  element.value = cartToken;\n}\n\ng();\n<\/script>\n  <input type=\"hidden\" name=\"cartToken\" value=\"\">\n  <input type=\"hidden\" name=\"form_type\" value=\"contact\">\n  <input type=\"hidden\" name=\"utf8\" value=\"✓\">\n  <div class=\"contact__fields\">\n      <div class=\"field\">\n        <input class=\"field__input\" autocomplete=\"name\" type=\"text\" id=\"ContactForm-name\" name=\"contact[Name]\" value=\"\" placeholder=\"Name\">\n        <label class=\"field__label\" for=\"ContactForm-name\">Name<\/label>\n      <\/div>\n      <div class=\"field field--with-error\">\n        <input autocomplete=\"email\" type=\"email\" id=\"ContactForm-email\" class=\"field__input\" name=\"contact[email]\" spellcheck=\"false\" autocapitalize=\"off\" value=\"\" aria-required=\"true\" placeholder=\"Email\">\n        <label class=\"field__label\" for=\"ContactForm-email\">Email <span aria-hidden=\"true\">*<\/span><\/label><\/div>\n    <\/div>\n    <div class=\"field\">\n      <input type=\"tel\" id=\"ContactForm-phone\" class=\"field__input\" autocomplete=\"tel\" name=\"contact[Phone number]\" pattern=\"[0-9\\-]*\" value=\"\" placeholder=\"Phone number\">\n      <label class=\"field__label\" for=\"ContactForm-phone\">Phone number<\/label>\n    <\/div>\n    <div class=\"field\">\n      <textarea rows=\"10\" id=\"ContactForm-body\" class=\"text-area field__input\" name=\"contact[Comment]\" placeholder=\"Comment\"><\/textarea>\n      <label class=\"form__label field__label\" for=\"ContactForm-body\">Comment<\/label>\n    <\/div>\n    <div class=\"contact__button\">\n      <button type=\"submit\" class=\"button\">\n        Send\n      <\/button>\n    <\/div><input type=\"hidden\" name=\"oseid\" value=\"AsjqFZzamGvzMTx11RBaM2Mv\">\n<\/form>"
-      }
     }
   },
   "order": [
     "cart-items",
     "cart-footer",
-    "featured-products",
-    "162985321669e10583"
+    "162985321669e10583",
+    "featured-products"
   ]
 }
