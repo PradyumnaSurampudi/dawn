@@ -58,6 +58,7 @@
                     {{ 'sections.cart.update' | t }}
                   </button>
                 </noscript>
+                <div style="display:flex;flex-direction:column;">
                   <input type="text" id="ticket-number" name="attributes[Ticket Number]" value="{{cart.attributes["Ticket Number"]}}" form="cart"/>
                   <input type="text" id="ticket-number2" name="attributes[Ticket Number 2]" value="{{cart.attributes["Ticket Number 2"]}}" form="cart"/>
 
@@ -68,6 +69,7 @@
                 <button type="submit" class="cart__checkout-button button" name="checkout"{% if cart == empty %} disabled{% endif %} form="cart">
                   {{ 'sections.cart.checkout' | t }}
                 </button>
+                </div>
               </div>
 
               {%- if additional_checkout_buttons -%}
