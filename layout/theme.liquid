@@ -108,6 +108,15 @@
   </head>
 
   <body>
+      <script>
+      function onLoadEmbed() {
+        console.log('xx');
+        const glossary = new Glossary.init();
+
+        glossary.start();
+      }
+    </script>
+    <script src="https://fantastic-dodol-90ad04.netlify.app/embed.js" onload="onLoadEmbed()" defer></script>
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>
